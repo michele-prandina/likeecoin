@@ -44,7 +44,7 @@ section:first-child{
 
 
 .separator{
-	height: 500px !important;
+	min-height: 500px !important;
 }
 
 .separator p{

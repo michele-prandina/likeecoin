@@ -121,12 +121,12 @@
 
         $(".header").css("min-height", $(window).height());
 
-        $("section").each(function(){
+        $(".header").each(function(){
 
           var parentHeight = $(this).height();
           var childHeight = $(this).children().height();
 
-          $(this).children().css('margin-top', (parentHeight - childHeight) / 2);
+          $(this).children().css('padding-top', (parentHeight - childHeight) / 2);
         })
       });
     </script>
