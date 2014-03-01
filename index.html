@@ -21,7 +21,7 @@
       <div class="large-6 large-centered column" >
         <h1>Your likes, your wallet</h1>
       </div>
-      <div class="wow bounce scroll-down" data-wow-delay="2s" >
+      <div class="wow bounce scroll-down" data-wow-delay="1s" >
         <a href="#likee" data-scroll><i class="fi-arrow-down"></i></a>
       </div>
     </div>
@@ -29,7 +29,7 @@
 
   <section id="likee" class="what">
     <div class="row">
-      <div class="wow slideInLeft large-5 large-centered columns" data-wow-offset="5" >
+      <div class="wow slideInLeft large-5 large-centered columns" >
         <h2>What is it?</h2>
         <p>It is a digital currency based on the Facebook likes received from your friends.</p>
       </div>
@@ -39,7 +39,7 @@
 
   <section class="why gray-bg">
     <div class="row">
-      <div class="wow slideInRight large-5 large-centered columns" data-wow-offset="5">
+      <div class="wow slideInRight large-5 large-centered columns" >
         <h2>Why should I use it?</h2>
         <p>Likes have an intrinsic value recognised by any facebook user that received them. An electronic commodity with such a high diffusion and recognised value it’s perfect to became a medium of exchange.</p>
       </div>
@@ -54,7 +54,7 @@
 
   <section class="how gray-bg">
     <div class="row">
-      <div class="wow slideInLeft large-5 large-centered columns" data-wow-offset="5">
+      <div class="wow slideInLeft large-5 large-centered columns">
         <h2>Ok, how it works?</h2>
         <p>An algorithm controls the exchange rate between the likes you collect everyday and the Likees creation.</p>
       </div>
@@ -64,17 +64,19 @@
   <section class="principles">
     <div class="row" data-wow-offset="15">
       <h2>Principles</h2>
-      <div class="large-4 columns wow bounceIn" data-wow-delay="1s" >
+      <div class="large-10 large-centered column">
+        <div class="large-4 columns wow bounceIn"  >
         <h3>HAPPINESS ECONOMICS</h3>
         <p>The number of likes that you receive is a measure of the emotional value that you were able to create. Making these “generated emotions” tradable is an incredible way to revolutionize the economic system.</p>
       </div>
-      <div class="large-4 columns wow bounceIn" data-wow-delay="1.3s" >
+      <div class="large-4 columns wow bounceIn" data-wow-delay="1s" >
         <h3>PEOLPLE HAVE THE POWER</h3>
         <p>The first monetary system in history where currency is issued anytime you like something</p>
       </div>
-      <div class="large-4 columns wow bounceIn" data-wow-delay="1.5s" >
+      <div class="large-4 columns wow bounceIn" data-wow-delay="1.2s" >
         <h3>DEMOCRATIC WEALTH</h3>
         <p>Anyone having a Facebook account and some friends can join the community. There are no privileges, dominant positions, discriminations or entry barriers.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -130,7 +132,9 @@
     </script>
     <script src="js/wow.min.js"></script>
     <script type="text/javascript">
-      new WOW().init();
+      if($(window).width() > 780){
+        new WOW().init();
+      }
     </script>
     <script>
     $(function() {
