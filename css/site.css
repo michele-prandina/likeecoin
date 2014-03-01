@@ -9,10 +9,6 @@ body{
 }
 
 
-img{
-	width: 100%;
-	height: auto;
-}
 
 h1, h2, h3{
 	font-weight: 300;
@@ -87,7 +83,7 @@ section:first-child{
 
 .header .likee-coin-logo{
 	/*margin-top: 160px;*/
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .header .likee-coin-logo img{
@@ -131,3 +127,4 @@ section:first-child{
 .principles h2{
 	margin:0 0 72px 0;
 }
+
