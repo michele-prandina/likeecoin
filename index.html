@@ -20,12 +20,12 @@
       <h1>Your likes, your wallet</h1>
 
       <div class="wow bounce scroll-down" data-wow-delay="2s" >
-        <a href=""><span>Discover more</span><i class="fi-arrow-down"></i></a>
+        <a href="#likee" data-scroll><span>Discover more</span><i class="fi-arrow-down"></i></a>
       </div>
     </div>
   </section>
 
-  <section class="what">
+  <section id="likee" class="what">
     <div class="row">
       <div class="wow slideInLeft large-5 large-centered columns" data-wow-offset="5" >
         <h2>What is</h2>
@@ -35,7 +35,7 @@
   </section>
 
 
-  <section class="why">
+  <section class="why gray-bg">
     <div class="row">
       <div class="wow slideInRight large-5 large-centered columns" data-wow-offset="5">
         <h2>Why should I use it?</h2>
@@ -50,7 +50,7 @@
     </p>
   </section>
 
-  <section class="how">
+  <section class="how gray-bg">
     <div class="row">
       <div class="wow slideInLeft large-5 large-centered columns" data-wow-offset="5">
         <h2>Ok, how it works?</h2>
@@ -60,17 +60,17 @@
   </section>
 
   <section class="principles">
-    <div class="wow slideInRight row" data-wow-offset="15">
+    <div class="row" data-wow-offset="15">
       <h2>Principles</h2>
-      <div class="large-4 columns">
-        <h3>PEOLPLE HAVE THE POWER</h3>
-        <p>The first monetary system in history where currency is issued anytime you like something</p>
-      </div>
-      <div class="large-4 columns">
+      <div class="large-4 columns wow bounceIn" data-wow-delay="1s" >
         <h3>HAPPINESS ECONOMICS</h3>
         <p>The number of likes that you receive is a measure of the emotional value that you were able to create. Making these “generated emotions” tradable is an incredible way to revolutionize the economic system.</p>
       </div>
-      <div class="large-4 columns">
+      <div class="large-4 columns wow bounceIn" data-wow-delay="2s" >
+        <h3>PEOLPLE HAVE THE POWER</h3>
+        <p>The first monetary system in history where currency is issued anytime you like something</p>
+      </div>
+      <div class="large-4 columns wow bounceIn" data-wow-delay="3s" >
         <h3>DEMOCRATIC WEALTH</h3>
         <p>Anyone having a Facebook account and some friends can join the community. There are no privileges, dominant positions, discriminations or entry barriers.</p>
       </div>
@@ -90,7 +90,7 @@
   </section>
 -->
 
-  <section class="separator">
+  <section class="separator gray-bg">
     <div class="row">
       <p>
         <img src="img/thumbs/like_icon.png" style="width: 150px">
@@ -115,7 +115,7 @@
 
       $(document).ready(function(){
 
-        $("section").css("min-height", $(window).height());
+        $(".header").css("min-height", $(window).height());
         $("section").each(function(){
 
           var parentHeight = $(this).height();
@@ -126,8 +126,25 @@
       });
     </script>
     <script src="js/wow.min.js"></script>
-    <script>
-     new WOW().init();
+    <script type="text/javascript">
+      new WOW().init();
     </script>
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
   </body>
 </html>
